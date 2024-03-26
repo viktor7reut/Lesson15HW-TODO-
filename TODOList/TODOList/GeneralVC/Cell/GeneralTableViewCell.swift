@@ -13,7 +13,13 @@ class GeneralTableViewCell: UITableViewCell {
     @IBOutlet weak var categoriesImage: UIImageView!
     @IBOutlet weak var descriptionCategoriesLabel: UILabel!
     
+    //??
+    
     @IBAction func checkboxTapped(_ sender: UIButton) {
-        checkBox.isSelected = !checkBox.isSelected
+        if sender.isSelected == true {
+            sender.setImage(UIImage(named: "square.fill"), for: .normal)
+        } else {
+            sender.setImage(UIImage(named: "square"), for: .normal)
         }
+    }
 }
